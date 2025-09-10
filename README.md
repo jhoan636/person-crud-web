@@ -1,69 +1,60 @@
-# React + TypeScript + Vite
+# Gestor de Personas(Frontend)🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación React + Vite + TypeScript para gestionar personas (CRUD) y visualizar información relacionada.
+Incluye TailwindCSS, React Router, Axios, React-Hook-Form + Zod (validaciones), toasts y un diseño dark
 
-Currently, two official plugins are available:
+## 📋 Características
+✔️Arquitectura limpia y tipada (TypeScript)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✔️CRUD completo de personas (Crear, Leer, Actualizar, Eliminar)
 
-## Expanding the ESLint configuration
+✔️Validaciones de formularios con React-Hook-Form y Zod
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✔️Rutas protegidas con React Router
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✔️Notificaciones con react-hot-toast
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✔️Diseño responsivo con TailwindCSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+✔️Modo oscuro (dark mode)
+
+✔️Consumo de API REST con Axios
+
+---
+## 📦 Instalación y Ejecución Local
+
+### 🔗 1. Clonar y configurar el entorno
+
+⚡ Ejecuta el siguiente comando para clonar un repositorio **Git remoto**:
+
+```bash
+git clone https://github.com/jhoan636/person-crud-web.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⚡ Ejecuta el siguiente comando para entrar al directorio:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+cd person-crud-web
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+⚡ Ejecuta el siguiente comando para instalar las dependencias:
+
+```bash
+pnpm install
+```
+
+### 🚀 2. Ejecutar la aplicación
+⚡ Ejecuta el siguiente comando para iniciar la aplicación en modo desarrollo:
+
+```bash
+pnpm dev
+```
+
+⚡ Abre tu navegador y visita `http://localhost:5173` para ver la aplicación en acción.  
+
+### ⚙️ 2. Configura variables de entorno
+⚡ Crea un archivo `.env.local` en la raíz del proyecto y define las siguientes variables de entorno:
+
+```env
+VITE_API_BASE_URL = pon tu URL de la API
 ```
